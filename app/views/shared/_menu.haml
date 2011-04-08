@@ -1,0 +1,17 @@
+#headmenu
+  #menu
+    %ul#nav.wrap
+      %li.page_item.notfirst
+        %a{:href => "/"}
+          %span= t('home')
+      %li.page_item.page-item-1
+        %a{:href => "/content/about"}
+          %span= t('about_us')
+      %li.page_item.page-item-2
+        %a{:href => "/content/delivery"}
+          %span= t('delivery')
+      %li.page_item.page-item-3
+        %a{:href => "/content/contacts"}
+          %span= t('contacts')
+
+  = render "shared/taxonomies"

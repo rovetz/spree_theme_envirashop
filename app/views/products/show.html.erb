@@ -1,0 +1,32 @@
+<% @body_id = 'product-details' %>
+
+<div class="wrap background">
+	<div class="simpleCart_shelfItem">		
+		<div class="productdescription">
+			<h1 class="item_name"><%= @product.name %></h1>
+			<p><%= product_description(@product) rescue t("product_has_no_description") %></p>
+			<%= render 'properties' %>
+			<div class="options">
+<!-- TODO 
+				<span class="select_title">Size:
+					<select class="item_specifications">
+						<option value="2 Gig">2 Gig</option>
+						<option value="4 Gig">4 Gig</option>
+						<option value="6 Gig">6 Gig</option>
+						<option value="12 Gig">12 Gig</option>
+					</select>
+				</span>
+				<span class="quantity_title">Quantity:
+					<input type="text" class="item_quantity" value="1" />
+				</span>
+				<a href="#" class="item_add" id="s1">Add to Cart</a> 				
+-->
+				<span class="item_price"><%=product_price(@product)%></span>
+			</div>
+		</div>
+		
+		<%= render 'image', :product => @product -%>		
+		<%= render 'taxons' %>
+		
+	</div>
+</div>

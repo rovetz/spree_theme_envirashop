@@ -1,0 +1,7 @@
+<div class="productsidebar">
+<!--- Thumbnailed Images Starts --> 
+	<ul id="gallery" style="background-image:url(<%= (@product.images || @product.image) ? @product.images.first.attachment.url(:product) : "images/noimage/product.jpg" %>); background-repeat: no-repeat;">
+		<%= render 'thumbnails', :product => @product -%>
+	</ul>
+</div>
+<!--- Thumbnailed Images Ends -->
