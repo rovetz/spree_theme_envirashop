@@ -1,6 +1,5 @@
 %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "content-type"}/
-%meta{:content => "enVirashop - Spree eCommerce Theme Demo", :name => "description"}/
-%meta{:content => "", :name => "keywords"}/
+/ = meta_data_tags
 
 = javascript_include_tag "jquery", "execute", "simpleCart", "jquery.jcarousel.pack"
 = javascript_include_tag "yahoo-dom-event", "animation-min", "main-javascript", "jquery.fancybox-1.2.6.pack"
@@ -80,6 +79,5 @@
 
 - unless I18n.locale.to_s[0..1] == 'en'
   = javascript_include_tag ['localization/messages_', I18n.locale.to_s[0..1], '.js'].join
-= meta_data_tags
 
 = yield :head
