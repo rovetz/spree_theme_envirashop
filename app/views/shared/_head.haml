@@ -75,7 +75,7 @@
   
 = stylesheet_link_tag "skin", "style", "pagenavi-css"
 
-%link{:href => "http://www.lifeofstrange.com/envirashop/wp-content/uploads/2009/11/envira-icon.png", :rel => "shortcut icon"}/
+%link{:href => "/images/envira-icon.png", :rel => "shortcut icon"}/
 
 - unless I18n.locale.to_s[0..1] == 'en'
   = javascript_include_tag ['localization/messages_', I18n.locale.to_s[0..1], '.js'].join

@@ -55,17 +55,9 @@
       });
       });
     = stylesheet_link_tag "skin.css", "style.css"
-    %link{:href => "http://www.lifeofstrange.com/envirashop/feed/", :rel => "alternate", :title => "RSS 2.0", :type => "application/rss+xml"}/
-    %link{:href => "http://www.lifeofstrange.com/envirashop/feed/rss/", :rel => "alternate", :title => "RSS .92", :type => "text/xml"}/
-    %link{:href => "http://www.lifeofstrange.com/envirashop/feed/atom/", :rel => "alternate", :title => "Atom 0.3", :type => "application/atom+xml"}/
-    %link{:href => "http://www.lifeofstrange.com/envirashop/xmlrpc.php", :rel => "pingback"}/
     %title= title
     %link#wp-pagenavi-css{:href => "stylesheets/pagenavi-css.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "http://www.lifeofstrange.com/envirashop/xmlrpc.php?rsd", :rel => "EditURI", :title => "RSD", :type => "application/rsd+xml"}/
-    %link{:href => "http://www.lifeofstrange.com/envirashop/wp-includes/wlwmanifest.xml", :rel => "wlwmanifest", :type => "application/wlwmanifest+xml"}/
-    %link{:href => "http://www.lifeofstrange.com/envirashop", :rel => "index", :title => "enVirashop"}/
     / = stylesheet_link_tag "default.css", "custom.css"
-    %link{:href => "http://www.lifeofstrange.com/envirashop/wp-content/uploads/2009/11/envira-icon.png", :rel => "shortcut icon"}/
   %body
     #container
       = render :partial => 'shared/header'
