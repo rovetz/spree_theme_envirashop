@@ -70,7 +70,7 @@
           .featuretext
             - unless @featured_product.blank?
               %h1= @featured_product.name
-              %p= truncate product_description(@featured_product)
+              %p= truncate(product_description(@featured_product), 120)
               = link_to "Подробнее", @featured_product, :class => "moreinfo"
           / End Feature Post Markup
           / Ribbon Markup
