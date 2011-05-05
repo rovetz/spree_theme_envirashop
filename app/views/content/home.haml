@@ -58,6 +58,7 @@
     %title= title
     %link#wp-pagenavi-css{:href => "stylesheets/pagenavi-css.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
     / = stylesheet_link_tag "default.css", "custom.css"
+    = render :partial => 'shared/google_analytics'
   %body
     #container
       = render :partial => 'shared/header'

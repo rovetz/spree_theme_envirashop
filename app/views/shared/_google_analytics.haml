@@ -10,20 +10,20 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
-    - if flash[:commerce_tracking]
-      :javascript
-        // report e-commerce transaction information when applicable
-        pageTracker._addTrans(
-        " @order.number ",    //Order Number
-        "",    //Affiliation
-        " @order.total ",    //Order total
-        " @order.adjustments.tax.sum(:amount).to_s ",    //Tax Amount
-        " @order.adjustments.shipping.sum(:amount).to_s ",    //Ship Amount
-        "",    //City
-        "",    //State
-        ""    //Country
-        );
-         @order.line_items.each do |line_item| 
-          pageTracker._addItem(" @order.number ", " line_item.variant.sku ", " line_item.variant.product.name ",
-            "" /*Product Category*/, " line_item.price ", " line_item.quantity ");
-        pageTracker._trackTrans();
+  - if flash[:commerce_tracking]
+    :javascript
+      // report e-commerce transaction information when applicable
+      pageTracker._addTrans(
+      " @order.number ",    //Order Number
+      "",    //Affiliation
+      " @order.total ",    //Order total
+      " @order.adjustments.tax.sum(:amount).to_s ",    //Tax Amount
+      " @order.adjustments.shipping.sum(:amount).to_s ",    //Ship Amount
+      "",    //City
+      "",    //State
+      ""    //Country
+      );
+       @order.line_items.each do |line_item| 
+        pageTracker._addItem(" @order.number ", " line_item.variant.sku ", " line_item.variant.product.name ",
+          "" /*Product Category*/, " line_item.price ", " line_item.quantity ");
+      pageTracker._trackTrans();
