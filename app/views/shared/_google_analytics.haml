@@ -1,7 +1,7 @@
 - if tracker = Tracker.current
   :javascript
     var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', #{tracker.analytics_id}]);
+    _gaq.push(['_setAccount', '#{tracker.analytics_id}']);
     _gaq.push(['_trackPageview']);
 
     (function() {
